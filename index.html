@@ -1,341 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoixDuFoyer - La Communauté Privée</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Bebas Neue', sans-serif;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* HERO SECTION */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000000);
-        }
-        
-        .logo {
-            max-width: 120px;
-            width: 100%;
-            margin-bottom: 12px;
-            display: block;
-        }
-        
-        .hero-image {
-            width: 100%;
-            max-width: 350px;
-            margin: 20px auto;
-            border-radius: 12px;
-        }
-        
-        h1 {
-            font-family: 'Anton', sans-serif;
-            font-size: 2.8rem;
-            line-height: 1.1;
-            color: #FDCF13;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        
-        .subheadline {
-            font-size: 1.4rem;
-            color: #ffffff;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
-        
-        /* SOCIAL PROOF */
-        .social-proof {
-            padding: 60px 20px;
-            background-color: #0a0a0a;
-        }
-        
-        .proof-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .proof-card {
-            background: rgba(253, 207, 19, 0.05);
-            border: 1px solid rgba(253, 207, 19, 0.2);
-            padding: 25px;
-            text-align: center;
-            border-radius: 8px;
-        }
-        
-        .proof-number {
-            font-family: 'Anton', sans-serif;
-            font-size: 2.5rem;
-            color: #FDCF13;
-            display: block;
-        }
-        
-        .proof-label {
-            font-size: 1.1rem;
-            color: #888;
-            margin-top: 5px;
-            letter-spacing: 1px;
-        }
-        
-        .social-proof-img {
-            width: 100%;
-            max-width: 400px;
-            margin: 30px auto;
-            display: block;
-            border-radius: 12px;
-            opacity: 0.8;
-        }
-        
-        /* VALUE PROP */
-        .value-prop {
-            padding: 60px 20px;
-        }
-        
-        .section-title {
-            font-family: 'Anton', sans-serif;
-            font-size: 2rem;
-            color: #FDCF13;
-            text-align: center;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-        
-        .benefit {
-            margin-bottom: 35px;
-            padding-left: 20px;
-            border-left: 3px solid #FDCF13;
-        }
-        
-        .benefit h3 {
-            font-family: 'Anton', sans-serif;
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-        
-        .benefit p {
-            font-size: 1.1rem;
-            color: #aaaaaa;
-            line-height: 1.4;
-        }
-        
-        /* FOMO SECTION */
-        .fomo {
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, #000000, #111111);
-            text-align: center;
-            position: relative;
-        }
-        
-        .fomo::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #FDCF13, transparent);
-        }
-        
-        .fomo-text {
-            font-family: 'Anton', sans-serif;
-            font-size: 2.2rem;
-            color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        
-        .fomo-sub {
-            font-size: 1.3rem;
-            color: #FDCF13;
-            letter-spacing: 2px;
-        }
-        
-        .countdown-hint {
-            margin-top: 30px;
-            font-size: 1rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        
-        /* CTA SECTION */
-        .cta-section {
-            padding: 60px 20px 100px;
-            text-align: center;
-            background-color: #000000;
-        }
-        
-        .cta-button {
-            display: block;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 25px 20px;
-            background-color: #FDCF13;
-            color: #000000;
-            font-family: 'Anton', sans-serif;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            letter-spacing: 1px;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(253, 207, 19, 0.4);
-        }
-        
-        .cta-button:active {
-            transform: scale(0.98);
-        }
-        
-        .urgency-text {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        /* ANIMATIONS */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .hero, .proof-card, .benefit, .fomo {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        /* RESPONSIVE */
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 3.5rem;
-            }
-            
-            .proof-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoixDuFoyer - Accès Privé</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Bebas Neue',sans-serif;
+    text-align:center;
+}
+.container{
+    max-width:480px;
+    margin:auto;
+    padding:20px;
+}
+.logo{
+    width:100px;
+    margin:0 auto 20px;
+    display:block;
+}
+h1{
+    font-family:'Anton',sans-serif;
+    color:#FDCF13;
+    font-size:2.8rem;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+p{
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+.benefits{
+    text-align:left;
+    margin:30px 0;
+}
+.benefits li{
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+.cta{
+    display:block;
+    background:#FDCF13;
+    color:#000;
+    padding:20px;
+    text-decoration:none;
+    font-family:'Anton',sans-serif;
+    text-transform:uppercase;
+    border-radius:8px;
+    margin:25px 0;
+}
+.small{
+    font-size:0.9rem;
+    color:#777;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="assets/logo.png" alt="VoixDuFoyer Logo" class="logo">
-        <h1>Ce que tu vois n'est que la surface</h1>
-        <p class="subheadline">L'histoire continue en privé</p>
-        <img src="assets/hero.png" alt="Hero Image" class="hero-image">
-    </section>
+<div class="container">
 
-    <!-- SOCIAL PROOF SECTION -->
-    <section class="social-proof">
-        <div class="container">
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <span class="proof-number">894.1K</span>
-                    <div class="proof-label">Abonnés</div>
-                </div>
-                <div class="proof-card">
-                    <span class="proof-number">9.3M</span>
-                    <div class="proof-label">Vues</div>
-                </div>
-                <div class="proof-card">
-                    <span class="proof-number">1</span>
-                    <div class="proof-label">Série Unique</div>
-                </div>
-            </div>
-            <img src="assets/social-proof.png" alt="Social Proof" class="social-proof-img">
-        </div>
-    </section>
+    <!-- LOGO -->
+    <img src="assets/logo.png" alt="VoixDuFoyer Logo" class="logo">
 
-    <!-- VALUE PROPOSITION -->
-    <section class="value-prop">
-        <div class="container">
-            <h2 class="section-title">Ce qui t'attend</h2>
-            
-            <div class="benefit">
-                <h3>Les épisodes inédits</h3>
-                <p>Accède aux scènes coupées et aux suites réservées aux membres.</p>
-            </div>
-            
-            <div class="benefit">
-                <h3>La communauté insider</h3>
-                <p>Échange avec ceux qui comprennent vraiment l'histoire.</p>
-            </div>
-            
-            <div class="benefit">
-                <h3>Avant-première absolue</h3>
-                <p>Sois le premier à voir chaque nouvel épisode 48h avant les autres.</p>
-            </div>
-        </div>
-    </section>
+    <!-- HOOK -->
+    <h1>Tu rates la vraie histoire</h1>
 
-    <!-- FOMO SECTION -->
-    <section class="fomo">
-        <div class="container">
-            <p class="fomo-text">L'épisode 12 dévoile tout</p>
-            <p class="fomo-sub">Ils connaissent déjà la fin</p>
-            <p class="countdown-hint">Disponible uniquement en privé</p>
-        </div>
-    </section>
+    <!-- PROMESSE -->
+    <p>Ce qui est public n’est qu’une partie.<br>L’histoire continue en privé.</p>
 
-    <!-- CTA SECTION -->
-    <section class="cta-section">
-        <div class="container">
-            <a href="#" class="cta-button">Rejoindre la Communauté</a>
-            <p class="urgency-text">Accès immédiat - Places limitées</p>
-        </div>
-    </section>
+    <!-- CTA -->
+    <a href="https://chat.whatsapp.com/GtTkeuffBn2K0hEQ6iJXLA" class="cta">Rejoindre le groupe WhatsApp</a>
+
+    <!-- BENEFICES -->
+    <ul class="benefits">
+        <li>📺 Épisodes en avant-première</li>
+        <li>📽️ Coulisses de création</li>
+        <li>📊 Tu influences l’histoire</li>
+        <li>💬 Discussions avec les fans</li>
+        <li>📢 Annonces importantes</li>
+    </ul>
+
+    <!-- CTA -->
+    <a href="https://chat.whatsapp.com/GtTkeuffBn2K0hEQ6iJXLA" class="cta">Accéder maintenant</a>
+
+    <!-- PREUVE -->
+    <p>Déjà suivi par des centaines de milliers de personnes</p>
+
+    <!-- CTA -->
+    <a href="https://chat.whatsapp.com/GtTkeuffBn2K0hEQ6iJXLA" class="cta">Entrer dans la communauté</a>
+
+    <p class="small">Accès immédiat</p>
+
+</div>
 
 </body>
 </html>
