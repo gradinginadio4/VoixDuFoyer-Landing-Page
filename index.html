@@ -3,101 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VoixDuFoyer - Accès Privé</title>
+<title>VoixDuFoyer — Rejoins la communauté</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-    background:#000;
-    color:#fff;
-    font-family:'Bebas Neue',sans-serif;
-    text-align:center;
-}
-.container{
-    max-width:480px;
-    margin:auto;
-    padding:20px;
-}
-.logo{
-    width:100px;
-    margin:0 auto 20px;
-    display:block;
-}
-h1{
-    font-family:'Anton',sans-serif;
-    color:#FDCF13;
-    font-size:2.8rem;
-    text-transform:uppercase;
-    margin-bottom:15px;
-}
-p{
-    font-size:1.2rem;
-    margin-bottom:20px;
-}
-.benefits{
-    text-align:left;
-    margin:30px 0;
-}
-.benefits li{
-    margin-bottom:15px;
-    font-size:1.1rem;
-}
-.cta{
-    display:block;
-    background:#FDCF13;
-    color:#000;
-    padding:20px;
-    text-decoration:none;
-    font-family:'Anton',sans-serif;
-    text-transform:uppercase;
-    border-radius:8px;
-    margin:25px 0;
-}
-.small{
-    font-size:0.9rem;
-    color:#777;
-}
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+  }
+
+  .logo {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 28px;
+  }
+
+  .label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: #FDCF13;
+    margin-bottom: 12px;
+    opacity: 0.85;
+  }
+
+  h1 {
+    font-family: 'Anton', sans-serif;
+    color: #FDCF13;
+    font-size: 2.6rem;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.15rem;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    letter-spacing: 0.04em;
+  }
+
+  .sub span {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  /* BENEFITS */
+  .benefits {
+    background: #0d0d0d;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .benefits-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: #FDCF13;
+    margin-bottom: 18px;
+    opacity: 0.8;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .benefit-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .benefit-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .benefit-text strong {
+    display: block;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.05rem;
+    color: #fff;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+  }
+
+  .benefit-text span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid #1a1a1a;
+    margin: 28px 0;
+  }
+
+  /* LOSS AVERSION */
+  .loss {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .loss strong {
+    color: #FDCF13;
+  }
+
+  /* CTA PRIMARY */
+  .cta-primary {
+    display: block;
+    background: #FDCF13;
+    color: #000;
+    padding: 20px 24px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: opacity 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .cta-primary:active {
+    opacity: 0.88;
+  }
+
+  .cta-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.82rem;
+    color: #444;
+    letter-spacing: 0.1em;
+    margin-bottom: 36px;
+  }
+
+  /* SEPARATOR */
+  .separator {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    color: #333;
+    margin-bottom: 28px;
+  }
+
+  /* IDENTITY LINE */
+  .identity {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+
+  .identity-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.88rem;
+    color: #555;
+    letter-spacing: 0.06em;
+    margin-bottom: 28px;
+  }
+
+  /* CTA SECONDARY */
+  .cta-secondary {
+    display: block;
+    background: transparent;
+    color: #FDCF13;
+    padding: 18px 24px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 2px solid #FDCF13;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .footer-note {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.78rem;
+    color: #333;
+    letter-spacing: 0.12em;
+  }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-    <!-- LOGO -->
-    <img src="assets/logo.png" alt="VoixDuFoyer Logo" class="logo">
+  <!-- LOGO -->
+  <img src="assets/logo.png" alt="VoixDuFoyer" class="logo">
 
-    <!-- HOOK -->
-    <h1>Tu rates la vraie histoire</h1>
+  <!-- LABEL -->
+  <p class="label">Communauté officielle · Accès gratuit</p>
 
-    <!-- PROMESSE -->
-    <p>Ce qui est public n’est qu’une partie.<br>L’histoire continue en privé.</p>
+  <!-- HOOK -->
+  <h1>Le prochain épisode<br>est déjà disponible</h1>
 
-    <!-- CTA -->
-    <a href="https://chat.whatsapp.com/GtTkeuffBn2K0hEQ6iJXLA" class="cta">Rejoindre la Communauté WhatsApp</a>
+  <!-- SUBHOOK -->
+  <p class="sub">
+    Pas pour tout le monde.<br>
+    <span>Uniquement pour ceux qui sont dans la communauté.</span>
+  </p>
 
-    <!-- BENEFICES -->
-    <ul class="benefits">
-        <li>📺 Épisodes en avant-première</li>
-        <li>📽️ Coulisses de création</li>
-        <li>📊 Tu influences l’histoire</li>
-        <li>💬 Discussions avec les fans</li>
-        <li>📢 Annonces importantes</li>
-    </ul>
+  <!-- BENEFITS -->
+  <div class="benefits">
+    <p class="benefits-title">Ce que tu reçois ici</p>
 
-    <!-- CTA -->
-    <a href="https://chat.whatsapp.com/GtTkeuffBn2K0hEQ6iJXLA" class="cta">Accéder maintenant</a>
+    <div class="benefit-item">
+      <span class="benefit-icon">📺</span>
+      <div class="benefit-text">
+        <strong>Épisodes avant TikTok</strong>
+        <span>Tu regardes pendant que les autres attendent encore.</span>
+      </div>
+    </div>
 
-    <!-- PREUVE -->
-    <p>Déjà suivi par des centaines de milliers de personnes</p>
+    <div class="benefit-item">
+      <span class="benefit-icon">🎙️</span>
+      <div class="benefit-text">
+        <strong>Annonces en premier</strong>
+        <span>Nouvelles séries, nouveaux personnages — tu es toujours le premier informé.</span>
+      </div>
+    </div>
 
-    <!-- CTA -->
-    <a href="https://chat.whatsapp.com/GtTkeuffBn2K0hEQ6iJXLA" class="cta">Entrer dans la communauté</a>
+    <div class="benefit-item">
+      <span class="benefit-icon">✍️</span>
+      <div class="benefit-text">
+        <strong>Tu influences l'histoire</strong>
+        <span>Tes réactions sont lues. Ce que tu dis ici peut finir dans un épisode.</span>
+      </div>
+    </div>
+  </div>
 
-    <p class="small">Accès immédiat</p>
+  <!-- LOSS AVERSION -->
+  <p class="loss">
+    Chaque épisode partagé en avant-première dans la communauté<br>
+    est un moment que tu ne peux pas récupérer après.<br>
+    <strong>Une fois publié sur TikTok, l'avant-première est terminée.</strong>
+  </p>
+
+  <!-- CTA PRIMARY -->
+  <a href="https://chat.whatsapp.com/GlqaRvYFOJg24eQ7F0nlP8?mode=gi_t" class="cta-primary">
+    Rejoindre la communauté
+  </a>
+  <p class="cta-sub">Gratuit · Accès immédiat · WhatsApp</p>
+
+  <hr class="divider">
+
+  <!-- IDENTITY PULL -->
+  <p class="identity">Les vrais fans sont déjà à l'intérieur.</p>
+  <p class="identity-sub">La question c'est — toi, t'es où ?</p>
+
+  <!-- CTA SECONDARY -->
+  <a href="https://chat.whatsapp.com/GlqaRvYFOJg24eQ7F0nlP8?mode=gi_t" class="cta-secondary">
+    J'entre maintenant
+  </a>
+
+  <p class="footer-note">100% gratuit · Aucune inscription requise</p>
 
 </div>
-
 </body>
 </html>
