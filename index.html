@@ -3,296 +3,263 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VoixDuFoyer — Rejoins la communauté</title>
+<title>VoixDuFoyer — Communauté officielle</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 
-  body {
-    background: #000;
-    color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
-    min-height: 100vh;
-  }
+body{
+  background:#000;
+  color:#fff;
+  font-family:'Bebas Neue',sans-serif;
+  text-align:center;
+  min-height:100vh;
+}
 
-  .container {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 32px 24px 48px;
-  }
+.container{
+  max-width:480px;
+  margin:0 auto;
+  padding:36px 24px 52px;
+}
 
-  .logo {
-    width: 88px;
-    height: 88px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 28px;
-  }
+.logo{
+  width:82px;
+  height:82px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 24px;
+}
 
-  .label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    color: #FDCF13;
-    margin-bottom: 12px;
-    opacity: 0.85;
-  }
+.label{
+  font-size:0.78rem;
+  letter-spacing:0.22em;
+  color:#FDCF13;
+  opacity:0.75;
+  margin-bottom:16px;
+}
 
-  h1 {
-    font-family: 'Anton', sans-serif;
-    color: #FDCF13;
-    font-size: 2.6rem;
-    line-height: 1.05;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
+h1{
+  font-family:'Anton',sans-serif;
+  color:#FDCF13;
+  font-size:2.75rem;
+  line-height:1.02;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
 
-  .sub {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.15rem;
-    color: #ccc;
-    line-height: 1.5;
-    margin-bottom: 32px;
-    letter-spacing: 0.04em;
-  }
+.sub{
+  font-size:1.1rem;
+  color:#999;
+  line-height:1.55;
+  margin-bottom:32px;
+  letter-spacing:0.03em;
+}
 
-  .sub span {
-    color: #fff;
-    font-size: 1.2rem;
-  }
+.sub strong{
+  color:#fff;
+  display:block;
+  font-size:1.15rem;
+  margin-top:6px;
+}
 
-  /* BENEFITS */
-  .benefits {
-    background: #0d0d0d;
-    border: 1px solid #222;
-    border-radius: 12px;
-    padding: 24px 20px;
-    margin-bottom: 28px;
-    text-align: left;
-  }
+.inside{
+  background:#0d0d0d;
+  border:1px solid #1e1e1e;
+  border-radius:12px;
+  padding:22px 18px;
+  margin-bottom:28px;
+  text-align:left;
+}
 
-  .benefits-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
-    color: #FDCF13;
-    margin-bottom: 18px;
-    opacity: 0.8;
-  }
+.inside-label{
+  font-size:0.72rem;
+  letter-spacing:0.22em;
+  color:#FDCF13;
+  opacity:0.7;
+  margin-bottom:16px;
+}
 
-  .benefit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 18px;
-  }
+.inside-item{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:16px;
+}
 
-  .benefit-item:last-child {
-    margin-bottom: 0;
-  }
+.inside-item:last-child{
+  margin-bottom:0;
+}
 
-  .benefit-icon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
+.inside-icon{
+  font-size:1.2rem;
+  flex-shrink:0;
+  margin-top:2px;
+}
 
-  .benefit-text strong {
-    display: block;
-    font-family: 'Anton', sans-serif;
-    font-size: 1.05rem;
-    color: #fff;
-    letter-spacing: 0.03em;
-    margin-bottom: 2px;
-  }
+.inside-text strong{
+  display:block;
+  font-family:'Anton',sans-serif;
+  font-size:1rem;
+  color:#fff;
+  letter-spacing:0.02em;
+  margin-bottom:3px;
+}
 
-  .benefit-text span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.9rem;
-    color: #777;
-    letter-spacing: 0.03em;
-    line-height: 1.4;
-  }
+.inside-text span{
+  font-size:0.88rem;
+  color:#666;
+  letter-spacing:0.02em;
+  line-height:1.4;
+}
 
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid #1a1a1a;
-    margin: 28px 0;
-  }
+.exclusion{
+  font-size:1rem;
+  color:#444;
+  letter-spacing:0.05em;
+  line-height:1.65;
+  margin-bottom:28px;
+}
 
-  /* LOSS AVERSION */
-  .loss {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    color: #555;
-    letter-spacing: 0.05em;
-    margin-bottom: 24px;
-    line-height: 1.6;
-  }
+.exclusion strong{
+  color:#fff;
+}
 
-  .loss strong {
-    color: #FDCF13;
-  }
+.cta-primary{
+  display:block;
+  background:#FDCF13;
+  color:#000;
+  padding:20px 24px;
+  text-decoration:none;
+  font-family:'Anton',sans-serif;
+  font-size:1.35rem;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  border-radius:10px;
+  margin-bottom:10px;
+  -webkit-tap-highlight-color:transparent;
+  transition:opacity 0.15s ease;
+}
 
-  /* CTA PRIMARY */
-  .cta-primary {
-    display: block;
-    background: #FDCF13;
-    color: #000;
-    padding: 20px 24px;
-    text-decoration: none;
-    font-family: 'Anton', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    transition: opacity 0.15s ease;
-    -webkit-tap-highlight-color: transparent;
-  }
+.cta-primary:active{
+  opacity:0.85;
+}
 
-  .cta-primary:active {
-    opacity: 0.88;
-  }
+.cta-meta{
+  font-size:0.78rem;
+  color:#333;
+  letter-spacing:0.12em;
+  margin-bottom:36px;
+}
 
-  .cta-sub {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.82rem;
-    color: #444;
-    letter-spacing: 0.1em;
-    margin-bottom: 36px;
-  }
+.divider{
+  border:none;
+  border-top:1px solid #151515;
+  margin:0 0 28px;
+}
 
-  /* SEPARATOR */
-  .separator {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
-    color: #333;
-    margin-bottom: 28px;
-  }
+.identity{
+  font-family:'Anton',sans-serif;
+  font-size:1.15rem;
+  color:#fff;
+  letter-spacing:0.03em;
+  margin-bottom:6px;
+}
 
-  /* IDENTITY LINE */
-  .identity {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.1rem;
-    color: #fff;
-    letter-spacing: 0.04em;
-    margin-bottom: 8px;
-  }
+.identity-sub{
+  font-size:0.85rem;
+  color:#444;
+  letter-spacing:0.06em;
+  margin-bottom:26px;
+}
 
-  .identity-sub {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.88rem;
-    color: #555;
-    letter-spacing: 0.06em;
-    margin-bottom: 28px;
-  }
+.cta-secondary{
+  display:block;
+  background:transparent;
+  color:#FDCF13;
+  padding:17px 24px;
+  text-decoration:none;
+  font-family:'Anton',sans-serif;
+  font-size:1.1rem;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  border:2px solid #FDCF13;
+  border-radius:10px;
+  margin-bottom:20px;
+  -webkit-tap-highlight-color:transparent;
+}
 
-  /* CTA SECONDARY */
-  .cta-secondary {
-    display: block;
-    background: transparent;
-    color: #FDCF13;
-    padding: 18px 24px;
-    text-decoration: none;
-    font-family: 'Anton', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border: 2px solid #FDCF13;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .footer-note {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.78rem;
-    color: #333;
-    letter-spacing: 0.12em;
-  }
+.footer{
+  font-size:0.72rem;
+  color:#2a2a2a;
+  letter-spacing:0.14em;
+}
 </style>
 </head>
 
 <body>
 <div class="container">
 
-  <!-- LOGO -->
   <img src="assets/logo.png" alt="VoixDuFoyer" class="logo">
 
-  <!-- LABEL -->
-  <p class="label">Communauté officielle · Accès gratuit</p>
+  <p class="label">Communauté officielle · Gratuit</p>
 
-  <!-- HOOK -->
-  <h1>Le prochain épisode<br>est déjà disponible</h1>
+  <h1>Tu es à<br>l'extérieur.</h1>
 
-  <!-- SUBHOOK -->
   <p class="sub">
-    Pas pour tout le monde.<br>
-    <span>Uniquement pour ceux qui sont dans la communauté.</span>
+    Il y a un endroit où les fans de VoixDuFoyer sont entre eux.
+    <strong>T'en fais pas encore partie.</strong>
   </p>
 
-  <!-- BENEFITS -->
-  <div class="benefits">
-    <p class="benefits-title">Ce que tu reçois ici</p>
+  <div class="inside">
+    <p class="inside-label">Ce qui se passe à l'intérieur</p>
 
-    <div class="benefit-item">
-      <span class="benefit-icon">📺</span>
-      <div class="benefit-text">
-        <strong>Épisodes avant TikTok</strong>
-        <span>Tu regardes pendant que les autres attendent encore.</span>
+    <div class="inside-item">
+      <span class="inside-icon">📺</span>
+      <div class="inside-text">
+        <strong>Les épisodes</strong>
+        <span>Partagés ici. Pas sur TikTok.</span>
       </div>
     </div>
 
-    <div class="benefit-item">
-      <span class="benefit-icon">🎙️</span>
-      <div class="benefit-text">
-        <strong>Annonces en premier</strong>
-        <span>Nouvelles séries, nouveaux personnages — tu es toujours le premier informé.</span>
+    <div class="inside-item">
+      <span class="inside-icon">🎙️</span>
+      <div class="inside-text">
+        <strong>Les annonces officielles</strong>
+        <span>Nouvelles séries, nouveaux personnages. Ici en premier.</span>
       </div>
     </div>
 
-    <div class="benefit-item">
-      <span class="benefit-icon">✍️</span>
-      <div class="benefit-text">
-        <strong>Tu influences l'histoire</strong>
-        <span>Tes réactions sont lues. Ce que tu dis ici peut finir dans un épisode.</span>
+    <div class="inside-item">
+      <span class="inside-icon">✍️</span>
+      <div class="inside-text">
+        <strong>Tes réactions influencent l'histoire</strong>
+        <span>Ce que tu dis ici est lu. Ça change ce qui se passe dans la série.</span>
       </div>
     </div>
+
   </div>
 
-  <!-- LOSS AVERSION -->
-  <p class="loss">
-    Chaque épisode partagé en avant-première dans la communauté<br>
-    est un moment que tu ne peux pas récupérer après.<br>
-    <strong>Une fois publié sur TikTok, l'avant-première est terminée.</strong>
+  <p class="exclusion">
+    Les discussions ont lieu.<br>
+    Les décisions se prennent.<br>
+    <strong>Sans toi.</strong>
   </p>
 
-  <!-- CTA PRIMARY -->
   <a href="https://chat.whatsapp.com/GlqaRvYFOJg24eQ7F0nlP8?mode=gi_t" class="cta-primary">
     Rejoindre la communauté
   </a>
-  <p class="cta-sub">Gratuit · Accès immédiat · WhatsApp</p>
+  <p class="cta-meta">Gratuit · WhatsApp · Accès immédiat</p>
 
   <hr class="divider">
 
-  <!-- IDENTITY PULL -->
-  <p class="identity">Les vrais fans sont déjà à l'intérieur.</p>
-  <p class="identity-sub">La question c'est — toi, t'es où ?</p>
+  <p class="identity">Les vrais fans sont à l'intérieur.</p>
+  <p class="identity-sub">Toi, t'es où ?</p>
 
-  <!-- CTA SECONDARY -->
   <a href="https://chat.whatsapp.com/GlqaRvYFOJg24eQ7F0nlP8?mode=gi_t" class="cta-secondary">
     J'entre maintenant
   </a>
 
-  <p class="footer-note">100% gratuit · Aucune inscription requise</p>
+  <p class="footer">100% gratuit · Aucune inscription requise</p>
 
 </div>
 </body>
