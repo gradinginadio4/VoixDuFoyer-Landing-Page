@@ -8,6 +8,8 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 
+html{-webkit-text-size-adjust:100%;}
+
 body{
   background:#000;
   color:#fff;
@@ -19,7 +21,7 @@ body{
 .container{
   max-width:480px;
   margin:0 auto;
-  padding:36px 24px 52px;
+  padding:36px 24px 48px;
 }
 
 .logo{
@@ -49,7 +51,7 @@ h1{
 
 .sub{
   font-size:1.1rem;
-  color:#999;
+  color:#aaa;
   line-height:1.55;
   margin-bottom:32px;
   letter-spacing:0.03em;
@@ -64,7 +66,7 @@ h1{
 
 .inside{
   background:#0d0d0d;
-  border:1px solid #1e1e1e;
+  border:1px solid #222;
   border-radius:12px;
   padding:22px 18px;
   margin-bottom:28px;
@@ -94,6 +96,7 @@ h1{
   font-size:1.2rem;
   flex-shrink:0;
   margin-top:2px;
+  line-height:1;
 }
 
 .inside-text strong{
@@ -107,14 +110,14 @@ h1{
 
 .inside-text span{
   font-size:0.88rem;
-  color:#666;
+  color:#888;
   letter-spacing:0.02em;
   line-height:1.4;
 }
 
 .exclusion{
   font-size:1rem;
-  color:#444;
+  color:#555;
   letter-spacing:0.05em;
   line-height:1.65;
   margin-bottom:28px;
@@ -138,15 +141,20 @@ h1{
   margin-bottom:10px;
   -webkit-tap-highlight-color:transparent;
   transition:opacity 0.15s ease;
+  cursor:pointer;
+}
+
+.cta-primary:hover{
+  opacity:0.92;
 }
 
 .cta-primary:active{
-  opacity:0.85;
+  opacity:0.82;
 }
 
 .cta-meta{
   font-size:0.78rem;
-  color:#333;
+  color:#444;
   letter-spacing:0.12em;
   margin-bottom:36px;
 }
@@ -167,7 +175,7 @@ h1{
 
 .identity-sub{
   font-size:0.85rem;
-  color:#444;
+  color:#555;
   letter-spacing:0.06em;
   margin-bottom:26px;
 }
@@ -184,13 +192,58 @@ h1{
   text-transform:uppercase;
   border:2px solid #FDCF13;
   border-radius:10px;
-  margin-bottom:20px;
+  margin-bottom:32px;
+  -webkit-tap-highlight-color:transparent;
+  transition:opacity 0.15s ease;
+  cursor:pointer;
+}
+
+.cta-secondary:hover{
+  opacity:0.8;
+}
+
+.cta-secondary:active{
+  opacity:0.6;
+}
+
+.socials{
+  border-top:1px solid #111;
+  padding-top:20px;
+  margin-bottom:16px;
+}
+
+.socials-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:6px 4px;
+}
+
+.socials-links a{
+  font-size:0.7rem;
+  color:#333;
+  letter-spacing:0.1em;
+  text-decoration:none;
+  text-transform:uppercase;
+  padding:4px 6px;
+  transition:color 0.15s ease;
   -webkit-tap-highlight-color:transparent;
 }
 
+.socials-links a:hover{
+  color:#555;
+}
+
+.socials-sep{
+  font-size:0.65rem;
+  color:#222;
+  user-select:none;
+}
+
 .footer{
-  font-size:0.72rem;
-  color:#2a2a2a;
+  font-size:0.68rem;
+  color:#222;
   letter-spacing:0.14em;
 }
 </style>
@@ -258,6 +311,18 @@ h1{
   <a href="https://chat.whatsapp.com/GlqaRvYFOJg24eQ7F0nlP8?mode=gi_t" class="cta-secondary">
     J'entre maintenant
   </a>
+
+  <div class="socials">
+    <div class="socials-links">
+      <a href="https://www.youtube.com/@VoixDuFoyer" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <span class="socials-sep">·</span>
+      <a href="https://www.facebook.com/people/Voixdufoyer/61576650630542" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <span class="socials-sep">·</span>
+      <a href="https://www.instagram.com/voixdufoyer/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <span class="socials-sep">·</span>
+      <a href="mailto:voixdufoyer@gmail.com">Contact</a>
+    </div>
+  </div>
 
   <p class="footer">100% gratuit · Aucune inscription requise</p>
 
